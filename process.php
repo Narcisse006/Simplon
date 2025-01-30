@@ -11,7 +11,7 @@ if (isset($_POST["create"])) {
 
     $formation = isset($_POST["formation"]) ? mysqli_real_escape_string($conn, $_POST["formation"]) : "";
 
-    // Vérification de l'existence des clés avant de les utiliser
+ 
     $genre = isset($_POST["genre"]) ? mysqli_real_escape_string($conn, $_POST["genre"]) : "";
    
     
@@ -41,7 +41,7 @@ if (isset($_POST["edit"])) {
 
     
 
-    // Vérification de l'existence des clés avant de les utiliser
+
     $genre = isset($_POST["genre"]) ? mysqli_real_escape_string($conn, $_POST["genre"]) : "";
     
     $updatesql = "UPDATE apprenant SET nom = '$nom', prenom = '$prenom', email = '$email', numero = '$numero', adresse = '$adresse', genre = '$genre', formation = '$formation' WHERE id=$id" ;
